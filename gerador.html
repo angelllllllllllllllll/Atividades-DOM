@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <section class="titulo">
+            <h1>Gerador de Número</h1>
+        </section>
+        <section class="conteudo">
+            <div class="botoes">
+                <button onclick="Acao()" id="btnAc" class="bt1">Gerar Número</button>
+            </div>
+        </section>
+        <section class="resultado"></section>
+        <div class="botao-zerar">
+        <button onclick="zerar()" class="btn-0">zerar</button>
+        </div>
+    </div>
+    <style>
+        *{
+    margin: 0 auto;
+    }
+        body{
+    width: 98vw;
+    height: 90vh;
+    background-color: rgb(255, 255, 255);
+
+    }
+    .container{
+    height: 70%;
+    width: 60%;
+    padding: 4rem;
+    margin-top: 5rem;
+    background-color: cadetblue;
+    }
+        .titulo{
+    height: 15%;
+    text-align: center;
+    align-items: center;
+    }
+        .conteudo{
+    padding-top: 5rem;
+    text-align: center;
+
+    }
+    h1{
+    padding-top: 3rem;
+    font-size: 40px;
+    font-family: 'Poppins';
+    font-weight: 900;
+    color: rgb(255, 255, 255);
+    }
+    .botao{
+    padding-top: 2rem;
+    }
+        .bt1, .bt2, .bt3, .bt4 {
+    height: 4rem;
+    width: 10rem;
+    border: none;
+    font-family: "Poppins";
+    font-size: 16px;
+    color: rgb(80, 80, 80);
+    }
+        .resultado{
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    font-size: 15px;
+    font-family: "Poppins";
+    color: rgb(255, 255, 255);
+    text-align: center;
+    }
+    .botao-zerar{
+       text-align: center;
+    }
+    .btn-0{
+        width: 20%;
+        height: 2.5rem;
+        background-color: rgb(174, 216, 218);
+        border-radius: 10px;
+        border: none;
+        font-family: 'Poppins';
+        color: rgb(0, 59, 59);
+    }
+    </style>
+    <script>
+        function Acao(){
+            let min = 1
+            let max = 50
+            let sub = max - min
+            Math.floor(result) = Math.random()*sub
+            document.querySelector('section.resultado').innerHTML += `<p> ${result}<p>`;
+                console.log(result)
+        }
+        function zerar(){
+            document.querySelector('section.resultado').innerHTML = ''
+
+        }
+    </script>
+</body>
+</html>

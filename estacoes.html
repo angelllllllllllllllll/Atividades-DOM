@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estações</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+    <section class="titulo">
+        <h1>Descubra a estação do ano</h1>
+    </section>
+    <section class="conteudo">
+        <input type="text" id="inserir" class="inserir-valor" placeholder="Insira o mês: ">
+        <div class="botao">
+            <button onclick= "calcular()" class="botao-calculo">calcular</button>
+        </div>
+    </section>
+    <section class="resultado"></section>
+    </div>
+    <style>
+        *{
+    margin: 0 auto;
+    }
+        body{
+    width: 98vw;
+    height: 90vh;
+    background-color: cadetblue;
+
+    }
+        .container{
+    height: 70%;
+    width: 60%;
+    padding: 4rem;
+    margin-top: 5rem;
+    background-color: white;
+    text-align: center;
+    }
+        .titulo{
+    height: 15%;
+    text-align: center;
+    align-items: center;
+    }
+        .conteudo{
+    padding-top: 5rem;
+    
+
+
+    }
+        .botao{
+    padding-top: 2rem;
+    }
+        .botao-calculo{
+    height: 5rem;
+    width: 26rem;
+    border: none;
+    font-family: "Poppins";
+    font-size: 20px;
+    color: rgb(80, 80, 80);
+    }
+    .botao-calculo:hover{
+        cursor: pointer;
+    }
+        .inserir-valor{
+    width: 26rem;
+    height: 4rem;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    }
+        .inserir-valor::placeholder{
+    font-family: 'Poppins';
+    }
+
+        h1{
+    padding-top: 3rem;
+    font-size: 160%;
+    font-family: 'Poppins';
+    font-weight: 900;
+    color: cadetblue;
+    }
+        .resultado{
+    padding-top: 2rem;
+    padding-left: 4.7rem;
+    font-size: 15px;
+    font-family: "Poppins";
+    color: cadetblue;
+    }
+
+    </style>
+    <script>
+        function calcular(){
+            let mes = document.querySelector('input#inserir').value;
+            switch (mes){
+                case 'janeiro':
+                case 'fevereiro':
+                case 'março':
+                    return document.querySelector('section.resultado').innerHTML = `Nesse mês, a estação é verão.`;
+
+                case 'abril':
+                case 'maio':
+                case 'junho':
+                    return document.querySelector('section.resultado').innerHTML = `Nesse mês, a estação é outono.`;
+                
+                case 'julho':
+                case 'agosto':
+                case 'setembro':
+                    return document.querySelector('section.resultado').innerHTML = `Nesse mês, a estação é inverno.`;
+                
+                case 'outubro':
+                case 'novembro':
+                case 'dezembro':
+                    return document.querySelector('section.resultado').innerHTML = `Nesse mês, a estação é primavera.`;
+                
+                default:
+                    return document.querySelector('section.resultado').innerHTML = `Insira um mês.`;
+        }
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fatorial</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="titulo">
+        <h1>Fatorial</h1>
+        <h2>Escreva um número de 1 a 21 na caixa a seguir:</h2>
+    </section>
+    <section class="conteudo">
+        <div class="botoes">
+            <input type="text" class="fatorial">
+            <section class="resultado"></section>
+            <button onclick= "calcular()" class="botao-contar">Calcular</button>
+            <button onclick="zerar()" class="botao-zerar">Zerar</button>
+        </div>
+    </section>
+    
+    <style>
+       *{
+    margin: 0 auto;
+    }
+        body{
+    width: 98vw;
+    height: 90vh;
+    background-color: rgb(211, 254, 255);
+
+    }
+        .titulo{
+    height: 15%;
+    text-align: center;
+    align-items: center;
+    }
+       h1{
+    padding-top: 3rem;
+    font-size: 35px;
+    font-family: 'Poppins';
+    font-weight: 900;
+    color: cadetblue;
+    }
+    h2{
+    padding-top: 3rem;
+    font-size: 25px;
+    font-family: 'Poppins';
+    font-weight: 900;
+    color: cadetblue;
+    }
+    .conteudo{
+    padding-top: 5rem;
+    justify-content: center;
+
+    }
+    input{
+        height: 5rem;
+    width: 20rem;
+    font-family: "Poppins";
+    font-size: 20px;
+    margin-top: 4rem;
+    border-radius: 10px;
+    border: none;
+    
+    }
+    .botoes{
+    padding-top: 2rem;
+    display: grid;
+    text-align: center;
+    height: 25rem;
+    
+    }
+        .botao-contar, .botao-zerar{
+    height: 5rem;
+    width: 20rem;
+    border: none;
+    font-family: "Poppins";
+    font-size: 20px;
+    color: rgb(80, 80, 80);
+    }
+    
+    .botao-zerar:hover, .botao-contar:hover{
+        cursor: pointer;
+    }
+    .resultado{
+        text-align: center;
+        padding-top: 1rem;
+        font-family: 'Poppins';
+        font-size: 18px;
+    }
+    
+    </style>
+    <script>
+        function calcular(){
+            let fatorial = document.querySelector('input.fatorial').value
+            let result = fatorial
+            if (fatorial > 21){
+                document.querySelector('section.resultado').innerHTML = `Digite um número menor que 21`
+            }
+            else{
+                for (var i = 1; i < fatorial; i++)
+                result *= i;
+            document.querySelector('section.resultado').innerHTML = result
+            }
+            
+        }
+        function zerar(){
+            document.querySelector('section.resultado').innerHTML = ''
+        }
+    </script>
+</body>
+</html>
